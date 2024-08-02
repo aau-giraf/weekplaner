@@ -19,7 +19,7 @@ class GirafButton extends StatefulWidget {
     this.fontSize = 20,
     this.fontWeight = FontWeight.normal,
     this.icon = const ImageIcon(AssetImage('assets/icons/accept.png')),
-    this.width = 40.0,
+    this.width = 160.0,
     this.height = 40.0,
     required this.onPressed,
     this.isEnabled = true,

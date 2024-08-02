@@ -46,6 +46,7 @@ class _ChooseCitizenScreenState extends State<ChooseCitizenScreen> {
         ),
         // Creates a new Dialog
         child: Dialog(
+          insetPadding: const EdgeInsets.all(0),
           child: Scaffold(
             appBar: GirafAppBar(
               key: const ValueKey<String>('girafDialogKey'),
@@ -57,7 +58,7 @@ class _ChooseCitizenScreenState extends State<ChooseCitizenScreen> {
               },
             ),
             body: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: StreamBuilder<List<DisplayNameModel>>(
                   stream: _bloc.citizen,
@@ -67,7 +68,7 @@ class _ChooseCitizenScreenState extends State<ChooseCitizenScreen> {
                       return Padding(
                         padding: const EdgeInsets.symmetric(
                           vertical: 0,
-                          horizontal: 20,
+                          horizontal: 0,
                         ),
                         child: GridView.count(
                             crossAxisCount: portrait ? 2 : 4,
@@ -133,7 +134,7 @@ class _ChooseCitizenScreenState extends State<ChooseCitizenScreen> {
               setState(() {});
             },
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 7),
               child: Column(
                 children: <Widget>[
                   Expanded(
@@ -154,7 +155,7 @@ class _ChooseCitizenScreenState extends State<ChooseCitizenScreen> {
                         maxHeight: 50.0,
                       ),
                       child: const Center(
-                        child: AutoSizeText('Tilføj Bruger',
+                        child: AutoSizeText('Tilføj bruger',
                             style: TextStyle(
                                 fontSize: GirafFont.large,
                                 color: Colors.black)),

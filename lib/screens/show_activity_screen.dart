@@ -128,13 +128,11 @@ class ShowActivityScreen extends StatelessWidget {
     list.add(
       Expanded(
         flex: 2,
-        child: Center(
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: buildActivity(context),
-            ),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: buildActivity(context),
           ),
         ),
       ),
@@ -144,8 +142,8 @@ class ShowActivityScreen extends StatelessWidget {
     final List<Widget> buttons = <Widget>[];
     buttons.add(Container(
         margin: const EdgeInsets.all(10),
-        width: 150,
-        height: 150,
+        width: 120,
+        height: 120,
         child: CitizenAvatar(
           displaynameModel: _girafUser,
         )));
@@ -229,7 +227,7 @@ class ShowActivityScreen extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 1,
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     key: const Key('AddChoiceBoardButtonKey'),
                     child: InkWell(
@@ -255,14 +253,13 @@ class ShowActivityScreen extends StatelessWidget {
                         Center(
                             key: const Key('ChoiceboardTitleKey'),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: StreamBuilder<ActivityModel>(
                                   stream: _activityBloc.activityModelStream,
                                   builder: (BuildContext context,
                                       AsyncSnapshot<ActivityModel>
                                           activitySnapshot) {
-                                    return Text('Tilføj Valgmulighed',
-                                        style: titleTextStyle,
+                                    return const Text('Tilføj valgmulighed',
                                         textAlign: TextAlign.center);
                                   }),
                             )),
@@ -311,7 +308,7 @@ class ShowActivityScreen extends StatelessWidget {
                       child: AspectRatio(
                         aspectRatio: 1,
                         child: Padding(
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(10),
                           child: Card(
                             child: Material(
                               child: InkWell(
@@ -335,12 +332,11 @@ class ShowActivityScreen extends StatelessWidget {
                                     : Colors.transparent,
                                 child: Column(children: <Widget>[
                                   // The title of the timer widget
-                                  Center(
-                                      key: const Key('TimerTitleKey'),
+                                  const Center(
+                                      key: Key('TimerTitleKey'),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: EdgeInsets.all(10.0),
                                         child: Text('Timer',
-                                            style: titleTextStyle,
                                             textAlign: TextAlign.center),
                                       )),
                                   Expanded(
@@ -375,7 +371,7 @@ class ShowActivityScreen extends StatelessWidget {
         theme.GirafColors.gradientDisabledOrange.withOpacity(0.38),
     disabledBackgroundColor:
         theme.GirafColors.gradientDisabledOrange.withOpacity(0.12),
-    padding: const EdgeInsets.all(8.0),
+    padding: const EdgeInsets.all(10.0),
   );
 
   /// Builds the activity widget.
@@ -383,7 +379,7 @@ class ShowActivityScreen extends StatelessWidget {
     String inputtext = _activity.choiceBoardName!;
     return Card(
         child: Column(children: <Widget>[
-      const Center(child: Padding(padding: EdgeInsets.all(8.0))),
+      const Center(child: Padding(padding: EdgeInsets.all(20.0))),
       Visibility(
         visible: _activity.isChoiceBoard,
         child: Row(

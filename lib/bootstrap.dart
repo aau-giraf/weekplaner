@@ -1,4 +1,5 @@
 import 'package:api_client/api/api.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/blocs/add_activity_bloc.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
@@ -19,7 +20,6 @@ import 'package:weekplanner/blocs/upload_from_gallery_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_selector_bloc.dart';
 import 'package:weekplanner/di.dart';
-import 'package:weekplanner/providers/environment_provider.dart' as environment;
 
 /// Bootstrap the project
 class Bootstrap {
@@ -29,13 +29,17 @@ class Bootstrap {
   /// NB:
   /// Singleton restricts the instantiation of a class to one 'single' instance
   void register() {
-
-    di.registerSingleton(() {
-      return Api(environment.getVar('SERVER_HOST'));
-    });
+    if (dotenv.env['API_URL'] != null && dotenv.env['API_PORT'] != null) {
+      di.registerSingleton(() {
+        return Api(dotenv.env['API_URL']! + ':' + dotenv.env['API_PORT']!);
+      });
+    } else {
+      di.registerSingleton(() {
+        return Api('http://10.0.2.2:2680');
+      });
+    }
 
     di.registerSingleton<AuthBloc>(() {
-
       return AuthBloc(di.get<Api>());
     });
 

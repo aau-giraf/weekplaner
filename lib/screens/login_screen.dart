@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:api_client/api/api_exception.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/di.dart';
 import 'package:weekplanner/exceptions/custom_exceptions.dart';
-import 'package:weekplanner/providers/environment_provider.dart' as environment;
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/pictogram_login_screen.dart';
 import 'package:weekplanner/style/font_size.dart';
@@ -255,7 +255,7 @@ class LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     // Autologin button, only used for debugging
-                    environment.getVar<bool>('DEBUG')
+                    (dotenv.env['DEBUG']) == 'true'
                         ? Container(
                             child: Transform.scale(
                               scale: 1.2,
@@ -269,9 +269,9 @@ class LoginScreenState extends State<LoginScreen> {
                                 ),
                                 onPressed: () {
                                   usernameCtrl.text =
-                                      environment.getVar<String>('USERNAME');
+                                      dotenv.env['AUTOFILL_USERNAME']!;
                                   passwordCtrl.text =
-                                      environment.getVar<String>('PASSWORD');
+                                      dotenv.env['AUTOFILL_PASSWORD']!;
                                   loginAction(context);
                                 },
                               ),

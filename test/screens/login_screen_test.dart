@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:api_client/api/api.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/choose_citizen_bloc.dart';
 import 'package:weekplanner/di.dart';
-import 'package:weekplanner/providers/environment_provider.dart' as environment;
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/login_screen.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
@@ -86,20 +86,6 @@ class MockAuthBloc extends Mock implements AuthBloc {
 }
 
 void main() {
-  const String debugEnvironments = '''
-    {
-      "SERVER_HOST": "http://web.giraf.cs.aau.dk:5000",
-      "DEBUG": true,
-      "USERNAME": "Graatand",
-      "PASSWORD": "password"
-    }
-    ''';
-  const String prodEnvironments = '''
-    {
-      "SERVER_HOST": "http://web.giraf.cs.aau.dk:5000",
-      "DEBUG": false
-    }
-    ''';
   late MockAuthBloc bloc;
   setUp(() {
     bloc = MockAuthBloc();
@@ -111,34 +97,34 @@ void main() {
 
   testWidgets('Has Auto-Login button in DEBUG mode',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
     expect(find.byKey(const Key('AutoLoginKey')), findsOneWidget);
   });
 
   testWidgets('Has NO Auto-Login button in PRODUCTION mode',
       (WidgetTester tester) async {
-    environment.setContent(prodEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'false';
     final LoginScreen loginScreen = LoginScreen();
     await tester.pumpWidget(MaterialApp(home: loginScreen));
     expect(find.byKey(const Key('AutoLoginKey')), findsNothing);
   });
 
   testWidgets('Renders LoginScreen (DEBUG)', (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
     expect(find.byType(LoginScreen), findsOneWidget);
   });
 
   testWidgets('Renders LoginScreen (PROD)', (WidgetTester tester) async {
-    environment.setContent(prodEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'false';
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
     expect(find.byType(LoginScreen), findsOneWidget);
   });
 
   testWidgets('Auto-Login fills username if pressed',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: MockLoginScreenAutoLogin()));
     await tester.tap(find.byKey(const Key('AutoLoginKey')));
     expect(find.text('Graatand'), findsOneWidget);
@@ -146,7 +132,7 @@ void main() {
 
   testWidgets('Auto-Login fills password if pressed',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: MockLoginScreenAutoLogin()));
     await tester.tap(find.byKey(const Key('AutoLoginKey')));
     expect(find.text('password'), findsOneWidget);
@@ -154,7 +140,7 @@ void main() {
 
   testWidgets('Auto-Login fills username and password if pressed',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: MockLoginScreenAutoLogin()));
     await tester.tap(find.byKey(const Key('AutoLoginKey')));
     expect(find.text('Graatand'), findsOneWidget);
@@ -163,20 +149,20 @@ void main() {
 
   testWidgets('Auto-Login does not fill username if not pressed',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
     expect(find.text('Graatand'), findsNothing);
   });
 
   testWidgets('Auto-Login does not fill password if not pressed',
       (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
     expect(find.text('password'), findsNothing);
   });
 
   testWidgets('Logging in works (PROD)', (WidgetTester tester) async {
-    environment.setContent(prodEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'false';
     final Completer<bool> done = Completer<bool>();
 
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
@@ -194,7 +180,7 @@ void main() {
   });
 
   testWidgets('Logging in works (DEBUG)', (WidgetTester tester) async {
-    environment.setContent(debugEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'true';
     final Completer<bool> done = Completer<bool>();
 
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
@@ -214,7 +200,7 @@ void main() {
   testWidgets(
       'Logging in with wrong information should show a GirafNotifyDialog',
       (WidgetTester tester) async {
-    environment.setContent(prodEnvironments);
+    dotenv.env['ENV_VARIABLE'] = 'false';
 
     await tester.pumpWidget(MaterialApp(home: MockLoginScreen()));
     await tester.pump();

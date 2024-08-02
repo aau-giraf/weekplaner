@@ -1,6 +1,0 @@
-{
-  "SERVER_HOST": "http://10.0.2.2:5000",
-  "DEBUG": true,
-  "USERNAME": "guardian-dev",
-  "PASSWORD": "password"
-}

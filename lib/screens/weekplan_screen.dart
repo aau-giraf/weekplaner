@@ -64,8 +64,7 @@ class WeekplanScreen extends StatelessWidget {
                   AsyncSnapshot<SettingsModel?> settingsSnapshot) {
                 if (settingsSnapshot.hasData) {
                   final SettingsModel? _settingsModel = settingsSnapshot.data;
-                  return WillPopScope(
-                    onWillPop: () async => true,
+                  return PopScope(
                     child: Scaffold(
                       appBar: GirafAppBar(
                         key: const ValueKey<String>('settings'),

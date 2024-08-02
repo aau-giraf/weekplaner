@@ -152,7 +152,6 @@ class ActivityBloc extends BlocBase {
       _alternateName = result as AlternateNameModel?;
       f.complete();
     }).onError((Object error) {
-      _alternateName = null;
       f.complete();
     });
     return f.future;

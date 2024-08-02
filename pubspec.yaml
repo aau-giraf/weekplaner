@@ -20,6 +20,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.1.0
   fluttertoast: ^8.2.2
   http: ^0.13.5
   image: ^3.2.2
@@ -48,6 +49,7 @@ flutter:
     - assets/audio/
     - assets/icons/
     - assets/timer/
+    - .env
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -69,7 +71,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: 'Quicksand'
+    - family: "Quicksand"
       fonts:
         - asset: assets/fonts/Quicksand-Bold.ttf
         - asset: assets/fonts/Quicksand-Light.ttf
