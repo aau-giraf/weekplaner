@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/timer_model.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:quiver/async.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/timer_running_mode.dart';
+import 'package:weekplanner/models/timer_model.dart';
 
 /// Logic for activities
 class TimerBloc extends BlocBase {

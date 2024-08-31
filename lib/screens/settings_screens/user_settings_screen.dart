@@ -1,5 +1,5 @@
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/giraf_user_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/choose_citizen_bloc.dart';
 import 'package:weekplanner/routes.dart';

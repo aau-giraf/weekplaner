@@ -1,7 +1,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/week_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
 import 'package:weekplanner/di.dart';

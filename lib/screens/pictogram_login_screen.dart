@@ -1,4 +1,4 @@
-import 'package:api_client/api/api.dart';
+import 'package:weekplanner/api/api.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/login_screen.dart';

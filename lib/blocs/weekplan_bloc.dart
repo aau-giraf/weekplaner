@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/activity_state_enum.dart';
-import 'package:api_client/models/enums/weekday_enum.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/weekday_model.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/user_week_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 
 /// Bloc that streams the currently chosen weekplan
 class WeekplanBloc extends BlocBase {

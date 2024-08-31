@@ -1,9 +1,9 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'package:api_client/api/account_api.dart';
-import 'package:api_client/api/api.dart';
-import 'package:api_client/api/user_api.dart';
-import 'package:api_client/models/enums/role_enum.dart';
+import 'package:weekplanner/api/account_api.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/user_api.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:async_test/async_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

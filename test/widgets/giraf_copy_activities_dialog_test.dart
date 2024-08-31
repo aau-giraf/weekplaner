@@ -1,4 +1,4 @@
-import 'package:api_client/models/enums/weekday_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/blocs/copy_activities_bloc.dart';

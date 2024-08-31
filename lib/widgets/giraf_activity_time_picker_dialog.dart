@@ -1,4 +1,4 @@
-import 'package:api_client/models/activity_model.dart';
+import 'package:weekplanner/models/activity_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weekplanner/blocs/timer_bloc.dart';

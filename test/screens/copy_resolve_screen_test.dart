@@ -1,11 +1,11 @@
-import 'package:api_client/api/api.dart';
-import 'package:api_client/api/user_api.dart';
-import 'package:api_client/api/week_api.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/role_enum.dart';
-import 'package:api_client/models/giraf_user_model.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/week_name_model.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/user_api.dart';
+import 'package:weekplanner/api/week_api.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/week_name_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -58,9 +58,7 @@ final WeekNameModel weekNameModel2 =
     WeekNameModel(name: 'weekplan2', weekNumber: 2020, weekYear: 33);
 
 void main() {
-
-  setUpAll(() 
-  {
+  setUpAll(() {
     registerFallbackValue(WeekModel());
   });
 
@@ -112,19 +110,19 @@ void main() {
           thumbnail: null, name: '2020 - 3', weekYear: 2020, weekNumber: 3));
     });
 
-    when(() => api.week.get(
-                'testId', weekNameModel.weekYear!, weekNameModel.weekNumber!))
+    when(() => api.week
+            .get('testId', weekNameModel.weekYear!, weekNameModel.weekNumber!))
         .thenAnswer((_) {
       return Stream<WeekModel>.value(weekplan1);
     });
 
     when(() => api.week.get(
-                'testId', weekNameModel2.weekYear!, weekNameModel2.weekNumber!))
+            'testId', weekNameModel2.weekYear!, weekNameModel2.weekNumber!))
         .thenAnswer((_) {
       return Stream<WeekModel>.value(weekplan2);
     });
 
-    when(()=> api.week.getNames('testId')).thenAnswer((_) {
+    when(() => api.week.getNames('testId')).thenAnswer((_) {
       return Stream<List<WeekNameModel>>.value(weekNameModelList);
     });
 

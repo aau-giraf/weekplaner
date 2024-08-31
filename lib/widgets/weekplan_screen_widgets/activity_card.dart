@@ -1,10 +1,10 @@
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/activity_state_enum.dart';
-import 'package:api_client/models/enums/complete_mark_enum.dart';
-import 'package:api_client/models/enums/default_timer_enum.dart';
-import 'package:api_client/models/pictogram_model.dart';
-import 'package:api_client/models/settings_model.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/enums/complete_mark_enum.dart';
+import 'package:weekplanner/models/enums/default_timer_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
@@ -352,7 +352,7 @@ class ActivityCard extends StatelessWidget {
                     height: 0,
                   );
                 }
-                
+
               default:
                 return Container(
                   width: 0,

@@ -1,4 +1,4 @@
-import 'package:api_client/models/enums/default_timer_enum.dart';
+import 'package:weekplanner/models/enums/default_timer_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_section_item.dart';
 

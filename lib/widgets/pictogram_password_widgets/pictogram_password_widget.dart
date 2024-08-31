@@ -1,5 +1,5 @@
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/pictogram_model.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/widgets/pictogram_image.dart';
 import 'package:weekplanner/widgets/pictogram_password_widgets/pictogram_input_field_widget.dart';

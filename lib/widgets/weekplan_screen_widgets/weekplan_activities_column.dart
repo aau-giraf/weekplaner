@@ -1,10 +1,10 @@
-import 'package:api_client/api/api_exception.dart';
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/activity_state_enum.dart';
-import 'package:api_client/models/enums/weekday_enum.dart';
-import 'package:api_client/models/settings_model.dart';
-import 'package:api_client/models/weekday_model.dart';
+import 'package:weekplanner/api/api_exception.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
+import 'package:weekplanner/models/settings_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';

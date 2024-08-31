@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/enums/role_enum.dart';
-import 'package:api_client/models/giraf_user_model.dart';
 import 'package:image/image.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 
 ///This bloc is used by a guardian to instantiate a new citizen.
 class NewCitizenBloc extends BlocBase {

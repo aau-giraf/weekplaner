@@ -1,9 +1,9 @@
 // ignore_for_file: must_be_immutable, public_member_api_docs
 
 import 'dart:async';
-import 'package:api_client/api/api.dart';
-import 'package:api_client/api/api_exception.dart';
-import 'package:api_client/models/displayname_model.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/api_exception.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/di.dart';

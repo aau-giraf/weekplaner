@@ -1,13 +1,13 @@
-import 'package:api_client/api/api.dart';
-import 'package:api_client/api/user_api.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/default_timer_enum.dart';
-import 'package:api_client/models/enums/giraf_theme_enum.dart';
-import 'package:api_client/models/enums/role_enum.dart';
-import 'package:api_client/models/enums/weekday_enum.dart';
-import 'package:api_client/models/giraf_user_model.dart';
-import 'package:api_client/models/settings_model.dart';
-import 'package:api_client/models/weekday_color_model.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/user_api.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/default_timer_enum.dart';
+import 'package:weekplanner/models/enums/giraf_theme_enum.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
+import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -21,7 +21,8 @@ import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_section_arrow_button.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_section_colorThemeButton.dart';
 
-class MockRoute extends Mock implements Route<dynamic>{}
+class MockRoute extends Mock implements Route<dynamic> {}
+
 class MockUserApi extends Mock implements UserApi, NavigatorObserver {
   @override
   Stream<GirafUserModel> me() {
@@ -88,9 +89,7 @@ void main() {
       weekDayColors: MockUserApi.createWeekDayColors(),
     );
 
-    when(()=>api.user.updateSettings(any(), any())
-          )
-        .thenAnswer((_) {
+    when(() => api.user.updateSettings(any(), any())).thenAnswer((_) {
       return Stream<bool>.value(true);
     });
 

@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/pictogram_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 
 /// For how long the debouncer should wait
 const int _debounceTime = 250;

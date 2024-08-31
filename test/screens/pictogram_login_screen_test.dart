@@ -1,5 +1,4 @@
-
-import 'package:api_client/api_client.dart';
+import 'package:weekplanner/api_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
@@ -22,40 +21,30 @@ void main() {
   });
 
   testWidgets('Screen renders', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-      home: PictogramLoginScreen()
-    ));
+    await tester.pumpWidget(MaterialApp(home: PictogramLoginScreen()));
   });
 
   testWidgets('Background is rendered', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-      home: PictogramLoginScreen()
-    ));
+    await tester.pumpWidget(MaterialApp(home: PictogramLoginScreen()));
 
     expect(find.byKey(const Key('backgroundContainer')), findsOneWidget);
   });
 
   testWidgets('Username input field is rendered', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-      home: PictogramLoginScreen()
-    ));
+    await tester.pumpWidget(MaterialApp(home: PictogramLoginScreen()));
 
     expect(find.byKey(const Key('usernameField')), findsOneWidget);
   });
 
   testWidgets('Pictogram password widget is rendered',
-    (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-      home: PictogramLoginScreen()
-    ));
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: PictogramLoginScreen()));
 
     expect(find.byKey(const Key('pictogramPasswordWidget')), findsOneWidget);
   });
 
   testWidgets('Both buttons are rendered', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-      home: PictogramLoginScreen()
-    ));
+    await tester.pumpWidget(MaterialApp(home: PictogramLoginScreen()));
 
     expect(find.byType(ElevatedButton), findsNWidgets(2));
   });

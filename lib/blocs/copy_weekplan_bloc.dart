@@ -1,10 +1,11 @@
 import 'dart:async';
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/weekday_model.dart';
+
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/choose_citizen_bloc.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 
 /// Bloc to copy a weekplan to other users
 class CopyWeekplanBloc extends ChooseCitizenBloc {

@@ -2,13 +2,13 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/enums/access_level_enum.dart';
-import 'package:api_client/models/pictogram_model.dart';
 import 'package:image/image.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/enums/access_level_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 
 /// Bloc for retriving an image from a phones gallery,
 /// and send it to the pictogram database

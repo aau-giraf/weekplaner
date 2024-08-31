@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/enums/role_enum.dart';
-import 'package:api_client/models/giraf_user_model.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/enums/weekplan_mode.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 
 /// All about Authentication. Login, logout, etc.
 class AuthBloc extends BlocBase {

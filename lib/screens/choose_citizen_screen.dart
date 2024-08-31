@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/role_enum.dart';
-import 'package:api_client/models/giraf_user_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';

@@ -1,4 +1,4 @@
-import 'package:api_client/models/weekday_color_model.dart';
+import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_section_item.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_theme_display_box.dart';

@@ -1,5 +1,5 @@
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/week_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
 
 /// Collection of user and its week.
 class UserWeekModel {

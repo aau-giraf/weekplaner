@@ -1,5 +1,5 @@
-import 'package:api_client/models/pictogram_model.dart';
-import 'package:api_client/models/week_model.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/week_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weekplanner/blocs/new_weekplan_bloc.dart';

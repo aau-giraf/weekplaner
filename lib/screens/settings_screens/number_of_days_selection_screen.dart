@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/settings_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';

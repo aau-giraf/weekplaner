@@ -1,6 +1,6 @@
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/settings_model.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';

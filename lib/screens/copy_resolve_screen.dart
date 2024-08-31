@@ -2,8 +2,8 @@
 
 import 'dart:async';
 
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/week_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/copy_resolve_bloc.dart';
 import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';

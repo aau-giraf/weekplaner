@@ -1,14 +1,12 @@
-import 'package:api_client/api/api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/bootstrap.dart';
 import 'package:weekplanner/di.dart';
 import 'package:weekplanner/screens/choose_citizen_screen.dart';
 import 'package:weekplanner/screens/login_screen.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
-
-final Api _api = di.get<Api>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

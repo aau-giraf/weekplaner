@@ -1,5 +1,5 @@
-import 'package:api_client/api/api.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/blocs/add_activity_bloc.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';

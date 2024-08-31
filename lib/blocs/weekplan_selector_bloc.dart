@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/week_name_model.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/bloc_base.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/week_name_model.dart';
 
 /// WeekplansBloc to get weekplans for a user
 class WeekplansBloc extends BlocBase {

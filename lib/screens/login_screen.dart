@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:api_client/api/api_exception.dart';
+import 'package:weekplanner/api/api_exception.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';

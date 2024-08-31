@@ -1,5 +1,5 @@
-import 'package:api_client/api/api.dart';
-import 'package:api_client/models/giraf_user_model.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weekplanner/api/errorcode_translator.dart';

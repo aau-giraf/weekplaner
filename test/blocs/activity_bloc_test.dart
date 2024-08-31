@@ -1,15 +1,15 @@
 // ignore_for_file: always_specify_types
 
-import 'package:api_client/api/activity_api.dart';
-import 'package:api_client/api/api.dart';
-import 'package:api_client/api/week_api.dart';
-import 'package:api_client/models/activity_model.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/activity_state_enum.dart';
-import 'package:api_client/models/enums/weekday_enum.dart';
-import 'package:api_client/models/pictogram_model.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/weekday_model.dart';
+import 'package:weekplanner/api/activity_api.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/week_api.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 import 'package:async_test/async_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

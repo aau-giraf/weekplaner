@@ -1,12 +1,12 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 import 'dart:async';
-import 'package:api_client/api/api_exception.dart';
-import 'package:api_client/models/displayname_model.dart';
-import 'package:api_client/models/enums/weekday_enum.dart';
-import 'package:api_client/models/settings_model.dart';
-import 'package:api_client/models/week_model.dart';
-import 'package:api_client/models/weekday_color_model.dart';
+import 'package:weekplanner/api/api_exception.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
+import 'package:weekplanner/models/settings_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
