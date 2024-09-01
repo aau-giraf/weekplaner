@@ -1,4 +1,4 @@
-name: Flutter verification
+name: GIRAF
 
 on: [push]
 
@@ -24,31 +24,39 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          cp .env.example .env
+        shell: bash
+
       - uses: actions/setup-java@v2
         with:
           distribution: "temurin"
           java-version: ${{ env.java_version }}
+
       - name: Cache Flutter dependencies
         uses: actions/cache@v3
         with:
           path: ${{ matrix.flutter_path }}
           key: ${{ runner.os }}-flutter-${{ env.flutter_version }}
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.flutter_version }}
           channel: ${{ env.flutter_channel }}
+
       - run: flutter pub get
         name: Get dependencies
-
-      - run: flutter pub upgrade api_client
-        name: Update api_client
 
       - run: flutter doctor
         name: Doctor
 
       - run: flutter analyze
         name: Linter
+
       - run: flutter test test/blocs test/exceptions test/models test/providers --coverage
         name: Tests
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
