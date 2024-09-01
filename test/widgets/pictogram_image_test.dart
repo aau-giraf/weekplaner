@@ -2,17 +2,17 @@
 
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/user_api.dart';
+import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
+import 'package:weekplanner/di.dart';
 import 'package:weekplanner/models/enums/access_level_enum.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
-import 'package:weekplanner/di.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/pictogram_image.dart';
 

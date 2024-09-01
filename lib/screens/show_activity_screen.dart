@@ -1,10 +1,3 @@
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/enums/activity_state_enum.dart';
-import 'package:weekplanner/models/enums/default_timer_enum.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:weekplanner/models/settings_model.dart';
-import 'package:weekplanner/models/weekday_model.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
@@ -15,9 +8,16 @@ import 'package:weekplanner/blocs/timer_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_bloc.dart';
 import 'package:weekplanner/di.dart';
 import 'package:weekplanner/exceptions/custom_exceptions.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
 import 'package:weekplanner/models/enums/app_bar_icons_enum.dart';
+import 'package:weekplanner/models/enums/default_timer_enum.dart';
 import 'package:weekplanner/models/enums/timer_running_mode.dart';
 import 'package:weekplanner/models/enums/weekplan_mode.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/pictogram_search_screen.dart';
 import 'package:weekplanner/style/font_size.dart';
@@ -709,8 +709,8 @@ class ShowActivityScreen extends StatelessWidget {
 
   /// Builds the button that changes the state of the activity. The content
   /// of the button depends on whether it is in guardian or citizen mode.
-  ButtonBar buildButtonBar() {
-    return ButtonBar(
+  OverflowBar buildButtonBar() {
+    return OverflowBar(
       // Key used for testing widget.
       key: const Key('ButtonBarRender'),
       alignment: MainAxisAlignment.center,

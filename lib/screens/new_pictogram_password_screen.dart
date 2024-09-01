@@ -1,10 +1,10 @@
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/errorcode_translator.dart';
 import 'package:weekplanner/blocs/new_pictogram_password_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/style/custom_color.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';

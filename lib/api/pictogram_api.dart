@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
+import 'package:flutter/material.dart';
 import 'package:weekplanner/http/http.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:flutter/material.dart';
 
 /// Pictogram endpoints
 class PictogramApi {

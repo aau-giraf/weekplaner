@@ -60,7 +60,7 @@ class GirafNotifyDialog extends StatelessWidget implements PreferredSizeWidget {
           ),
           Padding(
               padding: const EdgeInsets.only(bottom: 0),
-              child: ButtonBar(
+              child: OverflowBar(
                 alignment: MainAxisAlignment.center,
                 children: <Widget>[
                   GirafButton(

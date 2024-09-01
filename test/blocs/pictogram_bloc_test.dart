@@ -1,12 +1,12 @@
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/api/pictogram_api.dart';
-import 'package:weekplanner/models/enums/access_level_enum.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:async_test/async_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/pictogram_api.dart';
 import 'package:weekplanner/blocs/pictogram_bloc.dart';
+import 'package:weekplanner/models/enums/access_level_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 
 class MockPictogramApi extends Mock implements PictogramApi {
   @override

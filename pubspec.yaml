@@ -20,14 +20,14 @@ dependencies:
   flutter_dotenv: ^5.1.0
   fluttertoast: ^8.2.6
   http: ^0.13.6
-  path: ^1.9.0
-  path_provider: ^2.1.4
   image: ^3.3.0
   image_picker: ^0.8.9
   injector: ^2.0.0
   internet_connection_checker: ^1.0.0
   material_design_icons_flutter: ^6.0.7296
   mutex: ^3.1.0
+  path: ^1.9.0
+  path_provider: ^2.1.4
   quiver: ^3.2.1
   rflutter_alert: ^2.0.7
   rxdart: ^0.28.0

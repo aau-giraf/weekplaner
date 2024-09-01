@@ -1,8 +1,19 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/user_api.dart';
 import 'package:weekplanner/api/week_api.dart';
+import 'package:weekplanner/blocs/auth_bloc.dart';
+import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
+import 'package:weekplanner/blocs/edit_weekplan_bloc.dart';
+import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
+import 'package:weekplanner/blocs/settings_bloc.dart';
+import 'package:weekplanner/blocs/toolbar_bloc.dart';
+import 'package:weekplanner/blocs/weekplan_selector_bloc.dart';
+import 'package:weekplanner/di.dart';
 import 'package:weekplanner/models/activity_model.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/activity_state_enum.dart';
@@ -13,17 +24,6 @@ import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/models/week_name_model.dart';
 import 'package:weekplanner/models/weekday_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:weekplanner/blocs/auth_bloc.dart';
-import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
-import 'package:weekplanner/blocs/edit_weekplan_bloc.dart';
-import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
-import 'package:weekplanner/blocs/settings_bloc.dart';
-import 'package:weekplanner/blocs/toolbar_bloc.dart';
-import 'package:weekplanner/blocs/weekplan_selector_bloc.dart';
-import 'package:weekplanner/di.dart';
 import 'package:weekplanner/screens/copy_to_citizens_screen.dart';
 import 'package:weekplanner/widgets/giraf_3button_dialog.dart';
 

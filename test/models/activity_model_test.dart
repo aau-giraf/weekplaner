@@ -1,7 +1,7 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/activity_model.dart';
 import 'package:weekplanner/models/enums/activity_state_enum.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Throws on JSON is null', () {

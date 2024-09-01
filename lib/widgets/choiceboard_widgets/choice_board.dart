@@ -1,7 +1,7 @@
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/displayname_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 
 import 'choice_board_part.dart';
 

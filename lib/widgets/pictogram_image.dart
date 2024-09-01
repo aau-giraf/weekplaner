@@ -1,7 +1,7 @@
-import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/giraf_confirm_dialog.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';

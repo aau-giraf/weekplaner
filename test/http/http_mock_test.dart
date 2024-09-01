@@ -1,6 +1,6 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/http/http.dart';
 import 'package:weekplanner/http/http_mock.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   late HttpMock httpMock;

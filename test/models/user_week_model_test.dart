@@ -1,8 +1,8 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
-import 'package:weekplanner/models/week_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/user_week_model.dart';
+import 'package:weekplanner/models/week_model.dart';
 
 void main() {
   test('Can add week and user', () {

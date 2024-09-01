@@ -1,7 +1,7 @@
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/choose_citizen_bloc.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/settings_screens/change_password_screen.dart';
 import 'package:weekplanner/screens/settings_screens/change_username_screen.dart';
@@ -11,6 +11,7 @@ import 'package:weekplanner/widgets/settings_widgets/'
     'settings_section_arrow_button.dart';
 import 'package:weekplanner/widgets/settings_widgets/'
     'settings_section_item.dart';
+
 import '../../di.dart';
 
 /// Shows all the Guardian and Trustee users settings, and lets them change them

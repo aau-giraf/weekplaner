@@ -1,11 +1,11 @@
+import 'package:async_test/async_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/blocs/copy_resolve_bloc.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/access_level_enum.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/models/week_model.dart';
-import 'package:async_test/async_test.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:weekplanner/blocs/copy_resolve_bloc.dart';
 
 void main() {
   Api api = Api('any');

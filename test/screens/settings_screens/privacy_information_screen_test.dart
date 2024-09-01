@@ -1,15 +1,15 @@
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/api/user_api.dart';
-import 'package:weekplanner/models/enums/role_enum.dart';
-import 'package:weekplanner/models/giraf_user_model.dart';
-import 'package:weekplanner/models/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/user_api.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/blocs/toolbar_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/screens/settings_screens/privacy_information_screen.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 

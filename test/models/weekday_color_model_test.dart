@@ -1,6 +1,6 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/weekday_color_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final Map<String, dynamic> response = <String, dynamic>{

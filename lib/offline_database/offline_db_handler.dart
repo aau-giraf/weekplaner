@@ -221,7 +221,7 @@ class OfflineDbHandler {
 
   /// Retry sending the failed changes to the online database
   Future<void> retryFailedTransactions() async {
-    // TODO: Is not implemented correctly
+    // TODO(null): Is not implemented correctly
     /*final Database db = await database;
 
     final List<Map<String, dynamic>> dbRes =
@@ -599,19 +599,19 @@ class OfflineDbHandler {
 
   /// Return list of citizens from database based on guardian id
   Future<List<DisplayNameModel>> getCitizens(String id) async {
-    // TODO: This needs to be implemented
+    // TODO(null): This needs to be implemented
     throw UnimplementedError();
   }
 
   /// Return list of guardians from database based on citizen id
   Future<List<DisplayNameModel>> getGuardians(String id) async {
-    // TODO: This needs to be implemented
+    // TODO(null): This needs to be implemented
     throw UnimplementedError();
   }
 
   /// Add a [guardianId] to a [citizenId]
   Future<bool> addCitizenToGuardian(String guardianId, String citizenId) async {
-    // TODO: This needs to be implemented
+    // TODO(null): This needs to be implemented
     throw UnimplementedError();
   }
 

@@ -1,6 +1,9 @@
 @Timeout(Duration(seconds: 5))
 
 import 'dart:typed_data';
+
+import 'package:flutter_test/flutter_test.dart';
+import 'package:http/src/response.dart';
 import 'package:weekplanner/api/account_api.dart';
 import 'package:weekplanner/api/api_exception.dart';
 import 'package:weekplanner/http/http.dart' as http_r;
@@ -9,8 +12,6 @@ import 'package:weekplanner/models/enums/error_key.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/persistence/persistence_mock.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:http/src/response.dart';
 
 void main() {
   HttpMock httpMock = HttpMock();

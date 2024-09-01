@@ -1,9 +1,10 @@
-import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/copy_activities_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/widgets/copy_dialog_buttons_widget.dart';
 import 'package:weekplanner/widgets/giraf_title_header.dart';
+
 import '../style/custom_color.dart' as theme;
 
 /// A dialog widget presented to the user to confirm an action based on

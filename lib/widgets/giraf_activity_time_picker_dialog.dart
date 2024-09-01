@@ -1,12 +1,13 @@
-import 'package:weekplanner/models/activity_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weekplanner/blocs/timer_bloc.dart';
+import 'package:weekplanner/models/activity_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/style/font_size.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
 import 'package:weekplanner/widgets/giraf_title_header.dart';
+
 import '../style/custom_color.dart' as theme;
 
 /// The acitivty time picker dialog is a dialog, asking for a duration input.

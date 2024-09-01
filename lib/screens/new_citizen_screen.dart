@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/api/errorcode_translator.dart';
 import 'package:weekplanner/blocs/new_citizen_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/new_pictogram_password_screen.dart';
 import 'package:weekplanner/style/font_size.dart';

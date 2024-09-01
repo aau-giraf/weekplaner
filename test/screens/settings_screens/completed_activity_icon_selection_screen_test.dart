@@ -1,17 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/user_api.dart';
+import 'package:weekplanner/blocs/auth_bloc.dart';
+import 'package:weekplanner/blocs/settings_bloc.dart';
+import 'package:weekplanner/blocs/toolbar_bloc.dart';
+import 'package:weekplanner/di.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/complete_mark_enum.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/models/settings_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:weekplanner/blocs/auth_bloc.dart';
-import 'package:weekplanner/blocs/settings_bloc.dart';
-import 'package:weekplanner/blocs/toolbar_bloc.dart';
-import 'package:weekplanner/di.dart';
 import 'package:weekplanner/screens/settings_screens/completed_activity_icon_selection_screen.dart';
 import 'package:weekplanner/widgets/settings_widgets/settings_section_checkboxButton.dart';
 

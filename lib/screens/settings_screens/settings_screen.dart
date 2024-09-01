@@ -1,10 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/complete_mark_enum.dart';
 import 'package:weekplanner/models/enums/default_timer_enum.dart';
 import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/models/weekday_color_model.dart';
-import 'package:flutter/material.dart';
-import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/settings_screens/'
     'color_theme_selection_screen.dart';
@@ -24,6 +24,7 @@ import 'package:weekplanner/widgets/settings_widgets/'
     'settings_section_checkboxButton.dart';
 import 'package:weekplanner/widgets/settings_widgets/'
     'settings_section_item.dart';
+
 import '../../di.dart';
 import '../../widgets/settings_widgets/settings_theme_display_box.dart';
 import 'change_password_screen.dart';
@@ -78,7 +79,7 @@ class SettingsScreen extends StatelessWidget {
                 _settingsBloc
                     .updateSettings(_user!.id!, settingsModel)
                     .listen((_) {
-                  _settingsBloc.loadSettings(_user!);
+                  _settingsBloc.loadSettings(_user);
                 });
               },
                   titleTrailing: ThemeBox.fromHexValues(
@@ -90,9 +91,9 @@ class SettingsScreen extends StatelessWidget {
                 if (result != null) {
                   settingsModel.completeMark = result as CompleteMark;
                   _settingsBloc
-                      .updateSettings(_user!.id!, settingsModel)
+                      .updateSettings(_user.id!, settingsModel)
                       .listen((_) {
-                    _settingsBloc.loadSettings(_user!);
+                    _settingsBloc.loadSettings(_user);
                   });
                 }
               },
@@ -133,9 +134,9 @@ class SettingsScreen extends StatelessWidget {
                   if (result != null) {
                     settingsModel.nrOfDaysToDisplayPortrait = result as int;
                     _settingsBloc
-                        .updateSettings(_user!.id!, settingsModel)
+                        .updateSettings(_user.id!, settingsModel)
                         .listen((_) {
-                      _settingsBloc.loadSettings(_user!);
+                      _settingsBloc.loadSettings(_user);
                     });
                   }
                 },
@@ -150,9 +151,9 @@ class SettingsScreen extends StatelessWidget {
                   if (result != null) {
                     settingsModel.nrOfDaysToDisplayLandscape = result as int;
                     _settingsBloc
-                        .updateSettings(_user!.id!, settingsModel)
+                        .updateSettings(_user.id!, settingsModel)
                         .listen((_) {
-                      _settingsBloc.loadSettings(_user!);
+                      _settingsBloc.loadSettings(_user);
                     });
                   }
                 },
@@ -166,7 +167,7 @@ class SettingsScreen extends StatelessWidget {
                 _settingsBloc
                     .updateSettings(_user!.id!, settingsModel)
                     .listen((_) {
-                  _settingsBloc.loadSettings(_user!);
+                  _settingsBloc.loadSettings(_user);
                 });
               }),
               SettingsCheckMarkButton.fromBoolean(
@@ -175,7 +176,7 @@ class SettingsScreen extends StatelessWidget {
                 _settingsBloc
                     .updateSettings(_user!.id!, settingsModel)
                     .listen((_) {
-                  _settingsBloc.loadSettings(_user!);
+                  _settingsBloc.loadSettings(_user);
                 });
               }),
             ]);
@@ -236,7 +237,7 @@ class SettingsScreen extends StatelessWidget {
                 _settingsBloc
                     .updateSettings(_user!.id!, _settingsModel)
                     .listen((_) {
-                  _settingsBloc.loadSettings(_user!);
+                  _settingsBloc.loadSettings(_user);
                 });
               })
             ]);
@@ -266,7 +267,7 @@ class SettingsScreen extends StatelessWidget {
                 _settingsBloc
                     .updateSettings(_user!.id!, settingsModel)
                     .listen((_) {
-                  _settingsBloc.loadSettings(_user!);
+                  _settingsBloc.loadSettings(_user);
                 });
               }),
               SettingsArrowButton(
@@ -276,9 +277,9 @@ class SettingsScreen extends StatelessWidget {
                       .push(context, ChangeUsernameScreen(_user!));
                   if (result != null) {
                     _settingsBloc
-                        .updateSettings(_user!.id!, settingsModel)
+                        .updateSettings(_user.id!, settingsModel)
                         .listen((_) {
-                      _settingsBloc.loadSettings(_user!);
+                      _settingsBloc.loadSettings(_user);
                     });
                   }
                 },
@@ -290,9 +291,9 @@ class SettingsScreen extends StatelessWidget {
                       .push(context, ChangePasswordScreen(_user!));
                   if (result != null) {
                     _settingsBloc
-                        .updateSettings(_user!.id!, settingsModel)
+                        .updateSettings(_user.id!, settingsModel)
                         .listen((_) {
-                      _settingsBloc.loadSettings(_user!);
+                      _settingsBloc.loadSettings(_user);
                     });
                   }
                 },
@@ -340,8 +341,8 @@ class SettingsScreen extends StatelessWidget {
                         confirmOnPressed: () {
                           //if the correct name is written delete the user,
                           // else provide an error
-                          if (input == _user!.displayName) {
-                            _settingsBloc.deleteUser(_user!.id!);
+                          if (input == _user.displayName) {
+                            _settingsBloc.deleteUser(_user.id!);
                             Routes().goHome(context);
                           } else {
                             showDialog<String>(
@@ -400,9 +401,9 @@ class SettingsScreen extends StatelessWidget {
                       .push(context, TimeRepresentationScreen(_user!));
                   settingsModel.defaultTimer = result as DefaultTimer;
                   _settingsBloc
-                      .updateSettings(_user!.id!, settingsModel)
+                      .updateSettings(_user.id!, settingsModel)
                       .listen((_) {
-                    _settingsBloc.loadSettings(_user!);
+                    _settingsBloc.loadSettings(_user);
                   });
                 },
                 titleTrailing: Image(

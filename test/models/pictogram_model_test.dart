@@ -1,6 +1,6 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/enums/access_level_enum.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Throws when JSON is null', () {

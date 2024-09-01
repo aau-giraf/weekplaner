@@ -1,10 +1,10 @@
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 
 import '../../di.dart';
 import 'delete_pictogram_from_choice_board_button.dart';

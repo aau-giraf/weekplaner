@@ -1,10 +1,10 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/api/department_api.dart';
 import 'package:weekplanner/http/http_mock.dart';
 import 'package:weekplanner/models/department_model.dart';
 import 'package:weekplanner/models/department_name_model.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 Future<void> main() async {
   late HttpMock httpMock;

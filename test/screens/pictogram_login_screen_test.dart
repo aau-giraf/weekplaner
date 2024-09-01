@@ -1,6 +1,6 @@
-import 'package:weekplanner/api_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:weekplanner/api_client.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/di.dart';
 import 'package:weekplanner/screens/pictogram_login_screen.dart';

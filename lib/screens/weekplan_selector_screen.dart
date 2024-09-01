@@ -1,13 +1,13 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/week_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_selector_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/app_bar_icons_enum.dart';
+import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/copy_resolve_screen.dart';
 import 'package:weekplanner/screens/copy_to_citizens_screen.dart';

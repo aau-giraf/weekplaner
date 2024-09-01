@@ -1,11 +1,11 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/week_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/app_bar_icons_enum.dart';
+import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/screens/copy_resolve_screen.dart';
 import 'package:weekplanner/screens/weekplan_selector_screen.dart';
 import 'package:weekplanner/widgets/citizen_avatar_widget.dart';
@@ -14,6 +14,7 @@ import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/giraf_confirm_dialog.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
+
 import '../routes.dart';
 import '../style/custom_color.dart' as theme;
 

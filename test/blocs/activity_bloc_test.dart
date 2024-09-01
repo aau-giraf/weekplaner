@@ -1,8 +1,13 @@
 // ignore_for_file: always_specify_types
 
+import 'package:async_test/async_test.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:rxdart/rxdart.dart' as rx_dart;
 import 'package:weekplanner/api/activity_api.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/week_api.dart';
+import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/models/activity_model.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/activity_state_enum.dart';
@@ -10,11 +15,6 @@ import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/models/weekday_model.dart';
-import 'package:async_test/async_test.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:rxdart/rxdart.dart' as rx_dart;
-import 'package:weekplanner/blocs/activity_bloc.dart';
 
 class MockWeekApi extends Mock implements WeekApi {}
 

@@ -1,5 +1,5 @@
-import 'package:weekplanner/persistence/persistence.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:weekplanner/persistence/persistence.dart';
 
 /// Provides persistence capabilities
 class PersistenceClient implements Persistence {

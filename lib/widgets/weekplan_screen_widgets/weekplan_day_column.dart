@@ -1,20 +1,20 @@
-import 'package:weekplanner/api/api_exception.dart';
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/enums/activity_state_enum.dart';
-import 'package:weekplanner/models/enums/weekday_enum.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:weekplanner/models/settings_model.dart';
-import 'package:weekplanner/models/weekday_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
+import 'package:weekplanner/api/api_exception.dart';
 import 'package:weekplanner/blocs/activity_bloc.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/blocs/timer_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_bloc.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/enums/weekplan_mode.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/settings_model.dart';
+import 'package:weekplanner/models/weekday_model.dart';
 import 'package:weekplanner/screens/pictogram_search_screen.dart';
 import 'package:weekplanner/screens/show_activity_screen.dart';
 
@@ -333,11 +333,14 @@ class WeekplanDayColumn extends StatelessWidget {
           ),
         );
       },
-      onWillAccept: (Tuple2<ActivityModel, Weekday?>? data) {
+      onWillAcceptWithDetails:
+          (DragTargetDetails<Tuple2<ActivityModel, Weekday?>> details) {
         // Draggable can be dropped on every drop target
         return true;
       },
-      onAccept: (Tuple2<ActivityModel, Weekday?> data) {
+      onAcceptWithDetails:
+          (DragTargetDetails<Tuple2<ActivityModel, Weekday?>> details) {
+        final Tuple2<ActivityModel, Weekday?> data = details.data;
         weekplanBloc.reorderActivities(
             data.item1, data.item2!, weekday.day!, dropTargetIndex);
       },
@@ -375,11 +378,14 @@ class WeekplanDayColumn extends StatelessWidget {
               child: _pictogramIconStack(context, index, weekday, inEditMode)),
         );
       },
-      onWillAccept: (Tuple2<ActivityModel, Weekday>? data) {
+      onWillAcceptWithDetails:
+          (DragTargetDetails<Tuple2<ActivityModel, Weekday>> details) {
         // Draggable can be dropped on every drop target
         return true;
       },
-      onAccept: (Tuple2<ActivityModel, Weekday> data) {
+      onAcceptWithDetails:
+          (DragTargetDetails<Tuple2<ActivityModel, Weekday>> details) {
+        final Tuple2<ActivityModel, Weekday> data = details.data;
         weekplanBloc
             .reorderActivities(data.item1, data.item2, weekday.day!, index)
             .catchError((Object error) {

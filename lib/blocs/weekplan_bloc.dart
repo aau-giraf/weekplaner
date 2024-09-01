@@ -91,7 +91,7 @@ class WeekplanBloc extends BlocBase {
     final List<ActivityModel> localMarkedActivities = _markedActivities!.value;
 
     localMarkedActivities.add(activityModel);
-    _markedActivities!.add(localMarkedActivities);
+    _markedActivities.add(localMarkedActivities);
   }
 
   /// Removes a marked activity from the stream
@@ -99,7 +99,7 @@ class WeekplanBloc extends BlocBase {
     final List<ActivityModel> localMarkedActivities = _markedActivities!.value;
 
     localMarkedActivities.remove(activityModel);
-    _markedActivities!.add(localMarkedActivities);
+    _markedActivities.add(localMarkedActivities);
   }
 
   /// Clears marked activities

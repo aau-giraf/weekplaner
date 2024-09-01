@@ -24,7 +24,9 @@ void main() async {
   }
 }
 
+/// The main application widget for the Giraf app.
 class Giraf extends StatelessWidget {
+  /// Constructs a new instance of the Giraf widget.
   const Giraf({Key? key}) : super(key: key);
 
   @override
@@ -38,7 +40,9 @@ class Giraf extends StatelessWidget {
   }
 }
 
+/// A widget that wraps the authentication logic.
 class AuthWrapper extends StatefulWidget {
+  /// Constructs a new instance of the AuthWrapper widget.
   const AuthWrapper({Key? key}) : super(key: key);
 
   @override

@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:weekplanner/api/api_exception.dart';
 import 'package:weekplanner/models/enums/error_key.dart';
-import 'package:flutter/material.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
 
 /// Class for translating error codes to readable messages for the users

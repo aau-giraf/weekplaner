@@ -1,22 +1,23 @@
 // ignore_for_file: must_be_immutable
 
 import 'dart:async';
-import 'package:weekplanner/api/account_api.dart';
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/api/user_api.dart';
-import 'package:weekplanner/http/http.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/enums/role_enum.dart';
-import 'package:weekplanner/models/giraf_user_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/account_api.dart';
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/user_api.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/blocs/toolbar_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/http/http.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/role_enum.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/screens/settings_screens/change_password_screen.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
 

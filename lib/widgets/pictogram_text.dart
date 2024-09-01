@@ -1,12 +1,12 @@
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/settings_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/weekplan_mode.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/style/font_size.dart';
 
 /// This is a widget used to create text under the pictograms
@@ -94,7 +94,7 @@ double textWidth(String text, BuildContext context) {
               style:
                   const TextStyle(fontWeight: FontWeight.bold, fontSize: 120)),
           maxLines: 1,
-          textScaleFactor: MediaQuery.of(context).textScaleFactor,
+          textScaler: MediaQuery.textScalerOf(context),
           textDirection: TextDirection.ltr)
         ..layout())
       .size

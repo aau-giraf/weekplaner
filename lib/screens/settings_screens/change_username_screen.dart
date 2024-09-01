@@ -2,20 +2,22 @@
 
 import 'dart:async';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/api_exception.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/giraf_user_model.dart';
-import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/style/font_size.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
 import 'package:weekplanner/widgets/giraf_title_header.dart';
+
 import '../../style/custom_color.dart' as theme;
 
 /// Change username screen

@@ -1,20 +1,20 @@
 import 'dart:async';
 
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/enums/access_level_enum.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
 import 'package:rxdart/rxdart.dart';
+import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/new_citizen_bloc.dart';
 import 'package:weekplanner/blocs/pictogram_bloc.dart';
 import 'package:weekplanner/blocs/pictogram_image_bloc.dart';
 import 'package:weekplanner/blocs/toolbar_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/enums/access_level_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/screens/pictogram_search_screen.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/giraf_confirm_dialog.dart';

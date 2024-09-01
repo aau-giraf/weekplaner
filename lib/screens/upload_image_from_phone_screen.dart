@@ -1,14 +1,16 @@
 import 'dart:io';
-import 'package:weekplanner/models/pictogram_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/upload_from_gallery_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/style/font_size.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 import 'package:weekplanner/widgets/giraf_notify_dialog.dart';
 import 'package:weekplanner/widgets/loading_spinner_widget.dart';
+
 import '../style/custom_color.dart' as theme;
 
 /// Screen for uploading a [PictogramModel] to the server

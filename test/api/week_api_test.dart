@@ -1,5 +1,8 @@
 @Timeout(Duration(seconds: 5))
 
+import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:weekplanner/api/api_exception.dart';
 import 'package:weekplanner/api/week_api.dart';
 import 'package:weekplanner/http/http.dart' as http_r;
@@ -12,9 +15,6 @@ import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/models/week_name_model.dart';
 import 'package:weekplanner/models/weekday_model.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 Future<void> main() async {
   sqfliteFfiInit();

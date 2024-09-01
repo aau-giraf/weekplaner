@@ -2,6 +2,9 @@
 
 import 'dart:async';
 
+import 'package:connectivity/connectivity.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:weekplanner/api/connectivity_api.dart';
 import 'package:weekplanner/api/status_api.dart';
 import 'package:weekplanner/api/user_api.dart';
@@ -19,9 +22,6 @@ import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:weekplanner/offline_database/offline_db_handler.dart';
-import 'package:connectivity/connectivity.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 class ConnectivityMock implements Connectivity {
   bool isConnected = true;

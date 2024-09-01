@@ -1,7 +1,7 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/api/alternate_name_api.dart';
 import 'package:weekplanner/http/http_mock.dart';
 import 'package:weekplanner/models/alternate_name_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   late AlternateNameApi alternateNameApi;

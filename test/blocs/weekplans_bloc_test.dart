@@ -2,17 +2,17 @@
 
 import 'dart:io';
 
-import 'package:weekplanner/api/api.dart';
-import 'package:weekplanner/api/week_api.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/week_model.dart';
-import 'package:weekplanner/models/week_name_model.dart';
 import 'package:async_test/async_test.dart';
 import 'package:csv/csv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
+import 'package:weekplanner/api/api.dart';
+import 'package:weekplanner/api/week_api.dart';
 import 'package:weekplanner/blocs/weekplan_selector_bloc.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/week_name_model.dart';
 
 class MockWeekApi extends Mock implements WeekApi {}
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:weekplanner/api/status_api.dart';
 import 'package:connectivity/connectivity.dart';
+import 'package:weekplanner/api/status_api.dart';
 
 /// Connectivity methods
 class ConnectivityApi {

@@ -1,3 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:weekplanner/api/activity_api.dart';
 import 'package:weekplanner/http/http_mock.dart';
 import 'package:weekplanner/models/activity_model.dart';
@@ -8,8 +10,6 @@ import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/pictogram_model.dart';
 import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/models/weekday_model.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 Future<void> main() async {
   sqfliteFfiInit();

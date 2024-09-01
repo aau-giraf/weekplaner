@@ -1,11 +1,11 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:weekplanner/http/http.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/offline_database/offline_db_handler.dart';
-import 'package:flutter/material.dart';
 
 import 'connectivity_api.dart';
 
@@ -103,20 +103,20 @@ class UserApi {
   /// Deletes the user icon for a given user
   ///
   /// [id] Identifier for the user to which the icon should be deleted
-  // TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<bool> deleteIcon(String id) =>
       _http.delete('/$id/icon').map((Response res) => res.statusCode() == 200);
 
   /// Gets the raw user icon for a given user
   ///
   /// [id] Identifier of the GirafUser to get icon for
-  // TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<Image> getIcon(String id) => _http
       .get('/$id/icon/raw')
       .map((Response res) => Image.memory(res.response.bodyBytes));
 
   /// NYI
-  // TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<bool>? updateIcon() {
     // TODO(boginw): implement this
     return null;
@@ -126,7 +126,7 @@ class UserApi {
   /// be a guardian
   ///
   /// [id] Identifier of the GirafUser to get citizens for
-  // TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<List<DisplayNameModel>> getCitizens(String id) => _http
       .get('/$id/citizens')
       .map((Response res) => List<Map<String, dynamic>>.from(res.json['data'])
@@ -137,7 +137,7 @@ class UserApi {
   /// provided id.
   ///
   /// [id] Identifier for the citizen to get guardians for
-  /// TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<List<DisplayNameModel>> getGuardians(String id) => _http
       .get('/$id/guardians')
       .map((Response res) => List<Map<String, dynamic>>.from(res.json['data'])
@@ -149,7 +149,7 @@ class UserApi {
   ///
   /// [guardianId] The guardian
   /// [citizenId] The citizen to be added to the guardian
-  /// TODO: Offline mode needs to be implemented
+  // TODO(null): Offline mode needs to be implemented
   Stream<bool> addCitizenToGuardian(String guardianId, String citizenId) =>
       _http
           .post('/$guardianId/citizens/$citizenId')

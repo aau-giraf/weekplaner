@@ -1,13 +1,13 @@
-import 'package:weekplanner/models/activity_model.dart';
-import 'package:weekplanner/models/enums/access_level_enum.dart';
-import 'package:weekplanner/models/enums/activity_state_enum.dart';
-import 'package:weekplanner/models/pictogram_model.dart';
-import 'package:weekplanner/models/timer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rxdart/rxdart.dart' as rx_dart;
 import 'package:weekplanner/blocs/timer_bloc.dart';
+import 'package:weekplanner/models/activity_model.dart';
+import 'package:weekplanner/models/enums/access_level_enum.dart';
+import 'package:weekplanner/models/enums/activity_state_enum.dart';
+import 'package:weekplanner/models/pictogram_model.dart';
+import 'package:weekplanner/models/timer_model.dart';
 import 'package:weekplanner/widgets/giraf_activity_time_picker_dialog.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';
 

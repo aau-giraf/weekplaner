@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:rxdart/rxdart.dart';
 import 'package:weekplanner/http/http.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/persistence/persistence.dart';
-import 'package:rxdart/rxdart.dart';
 
 /// Hello world
 /// All Account Endpoints

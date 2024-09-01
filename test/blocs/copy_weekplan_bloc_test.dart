@@ -1,14 +1,14 @@
+import 'package:async_test/async_test.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:weekplanner/api/api.dart';
 import 'package:weekplanner/api/user_api.dart';
 import 'package:weekplanner/api/week_api.dart';
+import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
 import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/role_enum.dart';
 import 'package:weekplanner/models/giraf_user_model.dart';
 import 'package:weekplanner/models/week_model.dart';
-import 'package:async_test/async_test.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:weekplanner/blocs/copy_weekplan_bloc.dart';
 
 class MockUserApi extends Mock implements UserApi {
   @override

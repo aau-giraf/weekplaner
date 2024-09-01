@@ -1,5 +1,5 @@
-import 'package:weekplanner/models/alternate_name_model.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:weekplanner/models/alternate_name_model.dart';
 
 void main() {
   test('Throws on JSON is null', () {

@@ -1,6 +1,6 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:weekplanner/models/week_base_model.dart';
 import 'package:weekplanner/models/week_model.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final Map<String, dynamic>? response1 = <String, dynamic>{

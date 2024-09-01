@@ -1,20 +1,21 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 import 'dart:async';
-import 'package:weekplanner/api/api_exception.dart';
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/enums/weekday_enum.dart';
-import 'package:weekplanner/models/settings_model.dart';
-import 'package:weekplanner/models/week_model.dart';
-import 'package:weekplanner/models/weekday_color_model.dart';
+
 import 'package:flutter/material.dart';
+import 'package:weekplanner/api/api_exception.dart';
 import 'package:weekplanner/blocs/auth_bloc.dart';
 import 'package:weekplanner/blocs/settings_bloc.dart';
 import 'package:weekplanner/blocs/weekplan_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
 import 'package:weekplanner/models/enums/app_bar_icons_enum.dart';
+import 'package:weekplanner/models/enums/weekday_enum.dart';
 import 'package:weekplanner/models/enums/weekplan_mode.dart';
+import 'package:weekplanner/models/settings_model.dart';
 import 'package:weekplanner/models/user_week_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/screens/settings_screens/settings_screen.dart';
 import 'package:weekplanner/widgets/bottom_app_bar_button_widget.dart';

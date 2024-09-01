@@ -1,9 +1,9 @@
-import 'package:weekplanner/models/displayname_model.dart';
-import 'package:weekplanner/models/week_model.dart';
-import 'package:weekplanner/models/week_name_model.dart';
 import 'package:flutter/material.dart';
 import 'package:weekplanner/blocs/new_weekplan_bloc.dart';
 import 'package:weekplanner/di.dart';
+import 'package:weekplanner/models/displayname_model.dart';
+import 'package:weekplanner/models/week_model.dart';
+import 'package:weekplanner/models/week_name_model.dart';
 import 'package:weekplanner/routes.dart';
 import 'package:weekplanner/widgets/giraf_app_bar_widget.dart';
 import 'package:weekplanner/widgets/giraf_button_widget.dart';

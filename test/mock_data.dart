@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:rxdart/rxdart.dart' as rx_dart;
 import 'package:weekplanner/api/account_api.dart';
 import 'package:weekplanner/api/activity_api.dart';
 import 'package:weekplanner/api/api.dart';
@@ -22,9 +25,6 @@ import 'package:weekplanner/models/timer_model.dart';
 import 'package:weekplanner/models/week_model.dart';
 import 'package:weekplanner/models/weekday_color_model.dart';
 import 'package:weekplanner/models/weekday_model.dart';
-import 'package:flutter/material.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:rxdart/rxdart.dart' as rx_dart;
 
 import 'test_image.dart';
 
