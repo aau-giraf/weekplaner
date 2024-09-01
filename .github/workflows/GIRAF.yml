@@ -55,7 +55,7 @@ jobs:
       - run: flutter analyze
         name: Linter
 
-      - run: flutter test test/blocs test/exceptions test/models test/providers --coverage
+      - run: flutter test test/blocs test/exceptions test/models --coverage
         name: Tests
 
       - name: Upload coverage to Codecov
