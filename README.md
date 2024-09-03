@@ -6,7 +6,7 @@ The frontend uses the Flutter framework to maintain the UI, it is currently runn
 
 ## Running the application
 
-You can find guides on how to setup the weekplanner application [here](https://aau-giraf.github.io/wiki/setup)
+You can find guides on how to setup the weekplanner application [here](https://aau-giraf.github.io/wiki/Setup/Index/)
 
 # Branches
 
