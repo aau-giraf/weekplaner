@@ -491,7 +491,7 @@ void main() {
     await tester.tap(find.byKey(const Key('ConfirmDialogConfirmButton')));
     await tester.pumpAndSettle();
 
-    expect(find.text(nameWeekModel1), findsNothing);
+    expect(find.text('nameWeekModel1'), findsNothing);
   });
 
   testWidgets('Marking weekmodel and leave edit mode unmarks all weekmodels',
